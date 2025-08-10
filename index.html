@@ -245,36 +245,26 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Audio-driven talking head synthesis has achieved remarkable photorealism, yet state-of-the-art (SOTA) models exhibit a critical failure: they lack generalization to the full spectrum of human diversity in ethnicity, language, and age-groups. We argue this generalization gap is a direct symptom of fundamental limitations in existing training data, 
+            which lack the necessary scale, quality, and diversity.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            To address this foundational challenge, we introduce <span class="dnerf">TalkVid</span>, a new large-scale, high-quality, and diverse dataset containing 1244 hours of video from 7729 unique speakers. <span class="dnerf">TalkVid</span> is curated through a principled, multi-stage automated pipeline that rigorously filters for motion stability, 
+            aesthetic quality, and facial detail, and is validated against human judgments to ensure its reliability.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Furthermore, to enable more rigorous and equitable evaluation, we construct and release <span class="dnerf">TalkVid-Bench</span>, a stratified evaluation set of 500 clips meticulously balanced across key demographic and linguistic axes. Our comprehensive experiments demonstrate that a SOTA model trained on <span class="dnerf">TalkVid</span> 
+            significantly outperforms counterparts trained on previous datasets, exhibiting superior cross-dataset generalization and fairness.
+          </p>
+          <p>
+            Crucially, our analysis on <span class="dnerf">TalkVid-Bench</span> reveals critical performance disparities across subgroups that are obscured by traditional aggregate metrics, underscoring its necessity for future research. We will release <span class="dnerf">TalkVid</span> and <span class="dnerf">TalkVid-Bench</span> to the community to 
+            catalyze the development of the next generation of robust, generalizable, and equitable talking head models. Code and data can be found at <a href="https://github.com/FreedomIntelligence/TalkVid" target="_blank">https://github.com/FreedomIntelligence/TalkVid</a>.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
