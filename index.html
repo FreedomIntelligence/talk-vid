@@ -92,15 +92,23 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><a href="#">Shunian Chen</a><sup>1</sup><sup>*</sup>,</span>
             <span class="author-block"><a href="#">Hejin Huang</a><sup>1,2</sup><sup>*</sup>,</span>
-            <span class="author-block"><a href="#">Snehal Jauhri</a><sup>3</sup>,</span>
+            <span class="author-block"><a href="#">Yexin Liu</a><sup>3</sup><sup>*</sup>,</span>
+            <span class="author-block"><a href="#">Zihan Ye</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Pengcheng Chen</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Chenghao Zhu</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Michael Guan</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Rongsheng Wang</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="#">Junying Chen</a><sup>1</sup>,</span>
             <span class="author-block"><a href="#">Guanbin Li</a><sup>2</sup>,</span>
+            <span class="author-block"><a href="#">Ser-Nam Lim</a><sup>3</sup><sup>&dagger;</sup>,</span>
+            <span class="author-block"><a href="#">Harry Yang</a><sup>3</sup><sup>&dagger;</sup>,</span>
             <span class="author-block"><a href="#">Benyou Wang</a><sup>1</sup><sup>&dagger;</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong, Shenzhen</span>
             <span class="author-block"><sup>2</sup>Sun Yat-sen University</span>
-            <span class="author-block"><sup>3</sup>Hessian.AI, Darmstadt, Germany</span>
+            <span class="author-block"><sup>3</sup>The Hong Kong University of Science and Technology</span>
           </div>
 
           <div class="column has-text-centered">
@@ -163,79 +171,19 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+      <video id="teaser" autoplay muted loop playsinline style="width: 150%; height: auto;">
+        <source src="./static/videos/diversity.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        Examples from our <strong>TalkVid</strong> dataset, showcasing the diversity in identity, ethnicity, 
+        and head pose.
       </h2>
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -266,13 +214,13 @@
     <!--/ Abstract. -->
 
     <!-- Data Construction Pipeline -->
-    <div class="columns is-centered has-text-centered">
+    <div class="container is-max-desktop has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Data Construction Pipeline</h2>
         <div class="content has-text-centered">
           <img src="./static/images/data_pipeline.png" 
                alt="Data Construction Pipeline" 
-               style="width: 95%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+               style="width: 200%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
           <p class="subtitle has-text-centered" style="font-size: 0.95rem; margin-top: 1rem;">
             The <strong>TalkVid</strong> construction pipeline. The process starts with (1) video collection and clip segmentation. Each candidate clip
             then undergoes (2) a multi-stage filtering cascade to enforce quality across aesthetics, motion, and facial detail. Finally, the pipeline’s
@@ -282,6 +230,23 @@
       </div>
     </div>
     <!--/ Data Construction Pipeline -->
+
+    <!-- Data Statistics -->
+    <div class="container is-max-desktop has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Data Statistics</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/data_statistics.png" 
+               alt="Data Statistics" 
+               style="width: 200%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+          <p class="subtitle has-text-centered" style="font-size: 0.95rem; margin-top: 1rem;">
+            Statistical distributions of the <strong>TalkVid</strong> dataset. Top row: technical quality metrics for the final, filtered dataset. 
+            Bottom row: distributions of the high-level characteristics, including video categories, language, and speaker demographics.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Data Statistics -->
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
